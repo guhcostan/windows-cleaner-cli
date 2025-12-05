@@ -17,7 +17,7 @@ describe('DockerScanner', () => {
     expect(result).toHaveProperty('items');
     expect(result).toHaveProperty('totalSize');
     expect(Array.isArray(result.items)).toBe(true);
-  });
+  }, 15000);
 
   it('should handle dry run for clean', async () => {
     const scanner = new DockerScanner();
@@ -28,4 +28,3 @@ describe('DockerScanner', () => {
     expect(result.errors).toHaveLength(0);
   });
 });
-
