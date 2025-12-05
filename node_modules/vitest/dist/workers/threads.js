@@ -1,0 +1,55 @@
+import { s as setupEnvironment, r as runBaseTests } from '../chunks/base.CTp-EStD.js';
+import { w as workerInit } from '../chunks/init-threads.D8Ok07M7.js';
+import 'node:vm';
+import '@vitest/spy';
+import '../chunks/index.bFLgAE-Z.js';
+import '@vitest/expect';
+import '../chunks/setup-common.Cm-kSBVi.js';
+import '../chunks/coverage.D_JHT54q.js';
+import '@vitest/snapshot';
+import '@vitest/utils/timers';
+import '../chunks/utils.DvEY5TfP.js';
+import '../chunks/rpc.BytlcPfC.js';
+import '../chunks/index.0kCJoeWi.js';
+import '../chunks/test.BT8LKgU9.js';
+import '@vitest/runner';
+import '@vitest/utils/helpers';
+import '../chunks/benchmark.B3N2zMcH.js';
+import '@vitest/runner/utils';
+import '@vitest/utils/error';
+import 'pathe';
+import '../chunks/vi.2VT5v0um.js';
+import '@vitest/utils/offset';
+import '@vitest/utils/source-map';
+import '../chunks/_commonjsHelpers.D26ty3Ew.js';
+import '../chunks/date.Bq6ZW5rf.js';
+import '../chunks/init.B04saIIg.js';
+import 'node:fs';
+import 'node:module';
+import 'node:url';
+import 'vite/module-runner';
+import '../chunks/startModuleRunner.Iz2V0ESw.js';
+import '../chunks/modules.DJPjQW6m.js';
+import '../path.js';
+import 'node:path';
+import '@vitest/utils/serialize';
+import '../module-evaluator.js';
+import '../chunks/traces.U4xDYhzZ.js';
+import '@vitest/mocker';
+import '../chunks/index.BspFP3mn.js';
+import 'node:console';
+import '../chunks/inspector.CvyFGlXm.js';
+import '../chunks/evaluatedModules.Dg1zASAC.js';
+import 'node:perf_hooks';
+import 'node:timers';
+import 'node:timers/promises';
+import 'node:util';
+import '@vitest/utils/constants';
+import '../chunks/index.Z5E_ObnR.js';
+import 'expect-type';
+import 'node:worker_threads';
+
+workerInit({
+	runTests: runBaseTests,
+	setup: setupEnvironment
+});

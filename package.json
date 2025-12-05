@@ -1,0 +1,73 @@
+{
+  "name": "windows-cleaner-cli",
+  "version": "1.0.0",
+  "description": "Open source CLI tool to clean your Windows PC - remove junk files, caches, logs, and more",
+  "type": "module",
+  "bin": {
+    "windows-cleaner-cli": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsup src/index.ts --format esm --dts --clean",
+    "lint": "eslint src",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "windows",
+    "cleaner",
+    "cleanup",
+    "cache",
+    "cli",
+    "disk-space",
+    "system-maintenance",
+    "junk-files"
+  ],
+  "author": "guhcostan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guhcostan/windows-cleaner-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/guhcostan/windows-cleaner-cli/issues"
+  },
+  "homepage": "https://github.com/guhcostan/windows-cleaner-cli#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.28.0",
+    "@types/node": "^24.10.1",
+    "@vitest/coverage-v8": "^4.0.15",
+    "eslint": "^9.28.0",
+    "tsup": "^8.0.1",
+    "tsx": "^4.6.2",
+    "typescript": "^5.3.2",
+    "typescript-eslint": "^8.48.1",
+    "vitest": "^4.0.15"
+  },
+  "dependencies": {
+    "@inquirer/checkbox": "^5.0.2",
+    "@inquirer/confirm": "^6.0.2",
+    "chalk": "^5.3.0",
+    "commander": "^14.0.2",
+    "ora": "^9.0.0"
+  },
+  "engines": {
+    "node": ">=20.12.0"
+  },
+  "os": [
+    "win32",
+    "darwin",
+    "linux"
+  ]
+}
+
