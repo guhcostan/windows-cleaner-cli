@@ -1,6 +1,6 @@
 {
   "name": "windows-cleaner-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Open source CLI tool to clean your Windows PC - remove junk files, caches, logs, and more",
   "type": "module",
   "bin": {
