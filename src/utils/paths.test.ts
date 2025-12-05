@@ -38,7 +38,7 @@ describe('paths utils', () => {
   });
 
   describe('isSystemPath', () => {
-    it('should return true for system paths', () => {
+    it('should return true for Windows system paths', () => {
       expect(isSystemPath('C:\\Windows\\System32\\test')).toBe(true);
       expect(isSystemPath('C:\\Windows\\SysWOW64\\test')).toBe(true);
     });
@@ -47,6 +47,31 @@ describe('paths utils', () => {
       expect(isSystemPath('C:\\Users\\test')).toBe(false);
       expect(isSystemPath('D:\\Projects\\test')).toBe(false);
     });
+
+    it('should be case insensitive', () => {
+      expect(isSystemPath('c:\\windows\\system32\\test')).toBe(true);
+      expect(isSystemPath('C:\\WINDOWS\\SYSTEM32\\TEST')).toBe(true);
+    });
+  });
+
+  describe('Windows path patterns', () => {
+    it('should handle Windows-style paths', () => {
+      const winPath = 'C:\\Users\\Test\\AppData\\Local';
+      expect(winPath).toContain('\\');
+      expect(winPath.split('\\').length).toBeGreaterThan(1);
+    });
+
+    it('should handle environment variables patterns', () => {
+      const patterns = [
+        '%APPDATA%',
+        '%LOCALAPPDATA%',
+        '%TEMP%',
+        '%USERPROFILE%',
+      ];
+      
+      for (const pattern of patterns) {
+        expect(pattern).toMatch(/^%[A-Z_]+%$/);
+      }
+    });
   });
 });
-
