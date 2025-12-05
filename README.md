@@ -30,6 +30,10 @@
   <a href="https://ko-fi.com/guhcostan"><img src="https://img.shields.io/badge/Ko--fi-Support_this_project-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Support on Ko-fi"></a>
 </p>
 
+<p align="center">
+  <strong>🍎 Also available for macOS:</strong> <a href="https://github.com/guhcostan/mac-cleaner-cli">mac-cleaner-cli</a>
+</p>
+
 ---
 
 ## ⚡ Quick Start
