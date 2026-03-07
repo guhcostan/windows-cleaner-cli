@@ -27,7 +27,7 @@
 </p>
 
 <p align="center">
-  <a href="https://ko-fi.com/guhcostan"><img src="https://img.shields.io/badge/Ko--fi-Support_this_project-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Support on Ko-fi"></a>
+  <a href="https://github.com/sponsors/guhcostan"><img src="https://img.shields.io/badge/Sponsor-GitHub_Sponsors-ea4aaa?style=for-the-badge&logo=github-sponsors&logoColor=white" alt="Sponsor on GitHub"></a>
 </p>
 
 <p align="center">
@@ -231,7 +231,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 If this tool saved you time or disk space, consider supporting the project!
 
 <p align="center">
-  <a href="https://ko-fi.com/guhcostan"><img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support on Ko-fi"></a>
+  <a href="https://github.com/sponsors/guhcostan"><img src="https://img.shields.io/github/sponsors/guhcostan?label=Sponsor&logo=github-sponsors&color=ea4aaa&style=for-the-badge" alt="Sponsor on GitHub"></a>
 </p>
 
 Your support helps maintain and improve this tool. Thank you! 🙏
