@@ -2,7 +2,7 @@
 
 import { Command } from 'commander';
 import { ExitPromptError } from '@inquirer/core';
-import { interactiveCommand, listCategories, maintenanceCommand, uninstallCommand } from './commands/index.js';
+import { interactiveCommand, listCategories, maintenanceCommand, uninstallCommand, scanCommand } from './commands/index.js';
 import { initConfig, configExists, listBackups, cleanOldBackups, loadConfig, formatSize } from './utils/index.js';
 
 const program = new Command();
@@ -23,6 +23,20 @@ program
       if (error instanceof ExitPromptError) return;
       throw error;
     }
+  });
+
+program
+  .command('scan')
+  .description('Scan and report reclaimable space — read-only, deletes nothing')
+  .option('-c, --category <id>', 'Scan a single category (e.g. system-cache, temp-files)')
+  .option('-v, --verbose', 'Show the largest items per category')
+  .option('--no-progress', 'Disable progress bar')
+  .action(async (options) => {
+    await scanCommand({
+      category: options.category,
+      verbose: options.verbose,
+      noProgress: !options.progress,
+    });
   });
 
 program
