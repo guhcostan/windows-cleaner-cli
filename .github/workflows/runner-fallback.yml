@@ -1,0 +1,16 @@
+# Re-runs jobs that failed on the self-hosted notebook on GitHub-hosted runners.
+# See https://github.com/guhcostan/ci-fallback
+name: runner-fallback
+
+on:
+  workflow_run:
+    workflows:
+      - "CodeQL Security Analysis"
+    types: [completed]
+
+permissions:
+  actions: write
+
+jobs:
+  rerun:
+    uses: guhcostan/ci-fallback/.github/workflows/rerun.yml@main
